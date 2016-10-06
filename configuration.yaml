@@ -1,0 +1,7 @@
+app:
+  url: https://www.pivotaltracker.com/services/v5/
+  time_out: 180
+  account:
+    token: 59ebf88e06ba52b9bf81cf7ce68548bd
+    name: Walter.Mercado@jalasoft.com
+    password: P@ssw0rd
