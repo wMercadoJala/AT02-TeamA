@@ -1,7 +1,6 @@
 Given(/^I have created a "(.*)" story$/) do |name_stories|
   require_relative '../../../src/requests/Stories/stories_post'
   json = "{ \"name\" : \"#{name_stories}\"}"
-  puts json
   # noinspection RubyResolve,RubyResolve,RubyResolve,RubyResolve,RubyResolve,RubyUnusedLocalVariable
   http_response, @story = StoriesPost.call_and_return_response(@client, 'POST', json, @project_name.id)
 end
@@ -19,7 +18,7 @@ When(/^I send a (POST) request to StoriesPost endpoint with the (.*) "(.*)"$/) d
   @http_response, @story = StoriesPost.call_and_return_response(@client, method, json, @project_name.id)
 end
 
-When(/^I send a (PUT) request to StoriesPut endpoint change the (.*) to "(.*)"$/) do |method, attribute, name_project|
+When(/^I send a (PUT) request to StoriesPut endpoint to change the (.*) to "(.*)"$/) do |method, attribute, name_project|
   require_relative '../../../src/requests/Stories/stories_put'
   json = "{ \"#{attribute}\" : \"#{name_project}\""
   # noinspection RubyResolve

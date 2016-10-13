@@ -1,4 +1,4 @@
-@api_test
+@api_test @stories
 Feature: Stories Smoke Tests
 
   @smoke @get
@@ -19,7 +19,7 @@ Feature: Stories Smoke Tests
     Given I have set a connection to pivotal_tracker API service
       And I have created a "Test" project
       And I have created a "NewStory" story
-    When I send a PUT request to StoriesPut endpoint change the name to "ModifyStory"
+    When I send a PUT request to StoriesPut endpoint to change the name to "ModifyStory"
     Then I expect Status code 200 for the PUT request to Stories
 
   @smoke @delete
