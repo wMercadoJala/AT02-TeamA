@@ -29,7 +29,11 @@ class Project < BaseClassForDataClasses
                 :updated_at,
                 :velocity_averaged_over,
                 :version,
-                :week_start_day
+                :week_start_day,
+                :requirement,
+                :general_problem,
+                :error,
+                :code
   def initialize (values = {})
     super values
   end
@@ -39,5 +43,4 @@ class Project < BaseClassForDataClasses
     project = Project.new(result)
     project
   end
-
 end
