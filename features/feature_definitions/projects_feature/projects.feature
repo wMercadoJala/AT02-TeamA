@@ -66,5 +66,3 @@ Feature: Projects Smoke Tests
   """
   'name' parameter must be 50 characters or less.
   """
-
-
